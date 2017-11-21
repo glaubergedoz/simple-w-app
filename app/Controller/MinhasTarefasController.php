@@ -23,6 +23,7 @@ class MinhasTarefasController extends AppController
 
     public function index()
     {
+        echo $this->app;exit;
         $this->setAction('pesquisar');
     }
 
