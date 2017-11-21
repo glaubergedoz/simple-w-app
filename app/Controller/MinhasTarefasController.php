@@ -28,22 +28,13 @@ class MinhasTarefasController extends AppController
 
     public function pesquisar()
     {
-        $link =  FULL_BASE_URL.$this->webroot.'/tarefas/pesquisar.json';
+        $link =  FULL_BASE_URL.$this->webroot.'tarefas/pesquisar.json';
 
         $data = null;
         $httpSocket = new HttpSocket();
         $response = $httpSocket->get($link, $data);
         $response_body = json_decode($response->body);
         $tarefas = null;
-
-        echo $link;
-        echo '<br>';
-        echo FULL_BASE_URL;
-
-        /*echo '<pre>';
-        var_dump(FULL_BASE_URL);exit;
-        echo '</pre>';*/
-
 
         if($response_body!==null)
         {
@@ -70,7 +61,7 @@ class MinhasTarefasController extends AppController
 
     public function mostrar($id=null)
     {
-        $link = $this->webroot.'tarefas/mostrar/'.$id.'.json';
+        $link = FULL_BASE_URL.$this->webroot.'tarefas/mostrar/'.$id.'.json';
 
         $data = null;
         $httpSocket = new HttpSocket();
@@ -108,7 +99,7 @@ class MinhasTarefasController extends AppController
 
     public function alterar($id=null)
     {
-        $link = $this->webroot.'tarefas/mostrar/'.$id.'.json';
+        $link = FULL_BASE_URL.$this->webroot.'tarefas/mostrar/'.$id.'.json';
 
         $data = null;
         $httpSocket = new HttpSocket();
@@ -146,7 +137,7 @@ class MinhasTarefasController extends AppController
         {
             //exclui a tarefa
 
-            $link = $this->webroot.'tarefas/excluir.json';
+            $link = FULL_BASE_URL.$this->webroot.'tarefas/excluir.json';
 
             $data = array('id' => $id);
 
@@ -203,7 +194,7 @@ class MinhasTarefasController extends AppController
 
             //
 
-            $url_close = $this->webroot.'/minhas_tarefas';
+            $url_close = FULL_BASE_URL.$this->webroot.'/minhas_tarefas';
             $id_sufix = '_2';
             $resultado = 'sucesso';
 
@@ -211,7 +202,7 @@ class MinhasTarefasController extends AppController
 
             //pede pra confirmar
 
-            $url_close = $url_close = $this->webroot.'/minhas_tarefas/excluir/'.$id.'/confirm';
+            $url_close = $url_close = FULL_BASE_URL.$this->webroot.'/minhas_tarefas/excluir/'.$id.'/confirm';
             $mensagem_geral = 'A Tarefa selecionada será excluída. Você confirma?';
             $id_sufix = '_1';
             $resultado = 'confirma';
@@ -230,7 +221,7 @@ class MinhasTarefasController extends AppController
 
     public function concluir($id)
     {
-        $link = $this->webroot.'tarefas/concluir.json';
+        $link = FULL_BASE_URL.$this->webroot.'tarefas/concluir.json';
 
         $data = array('id' => $id);
 
@@ -286,7 +277,7 @@ class MinhasTarefasController extends AppController
 
         //
 
-        $url_close = $url_close = $this->webroot.'/minhas_tarefas';
+        $url_close = $url_close = FULL_BASE_URL.$this->webroot.'/minhas_tarefas';
         $id_sufix = '_1';
         $resultado = 'sucesso';
 
@@ -303,7 +294,7 @@ class MinhasTarefasController extends AppController
 
     public function ordenar()
     {
-        $link = $this->webroot.'tarefas/ordenar.json';
+        $link = FULL_BASE_URL.$this->webroot.'tarefas/ordenar.json';
 
         $data = array(
             'id' => $this->request->data['id'],
@@ -335,7 +326,7 @@ class MinhasTarefasController extends AppController
 
         //
 
-        $url_close = $url_close = $this->webroot.'/minhas_tarefas';
+        $url_close = $url_close = FULL_BASE_URL.$this->webroot.'/minhas_tarefas';
         $id_sufix = '_1';
         $resultado = 'sucesso';
 
@@ -367,7 +358,7 @@ class MinhasTarefasController extends AppController
                 $acao = $this->acao['adicionar'];
             }
 
-            $link = $this->webroot.'tarefas/'.$metodo.'.json';
+            $link = FULL_BASE_URL.$this->webroot.'tarefas/'.$metodo.'.json';
 
             $data = $this->request->data;
             $httpSocket = new HttpSocket();
@@ -403,7 +394,7 @@ class MinhasTarefasController extends AppController
                     return json_encode(
                         array(
                             'id_sufix' => '_1',
-                            'url_close' => $url_close = $this->webroot.'/minhas_tarefas',
+                            'url_close' => $url_close = FULL_BASE_URL.$this->webroot.'/minhas_tarefas',
                             //'resultado' => 'sucesso',
                             'resultado' => $tarefa->resultado,
                             'mensagem_geral' => $mensagem_geral,
