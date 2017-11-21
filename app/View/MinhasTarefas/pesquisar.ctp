@@ -3,7 +3,7 @@
     <div class="panel-heading">
         <h3 class="panel-title" style="font-size: 180%">
 
-            Minhas Tarefas<?php //echo '<pre>';var_dump($_SERVER);echo '</pre>';exit;; ?>
+            Minhas Tarefas<?php echo $this->webroot; //echo '<pre>';var_dump($_SERVER);echo '</pre>';exit;; ?>
 
             <a href="<?php echo $_SERVER["HTTP_REFERER"]; ?>/minhas_tarefas/adicionar"
                class="btn btn-sm btn-success pull-right">
