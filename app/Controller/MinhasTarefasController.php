@@ -36,10 +36,6 @@ class MinhasTarefasController extends AppController
         $response_body = json_decode($response->body);
         $tarefas = null;
 
-        /*echo '<pre>';
-        var_dump($response_body);
-        echo '</pre>';exit;*/
-
         if($response_body!==null)
         {
             //response = json format

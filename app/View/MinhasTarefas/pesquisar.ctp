@@ -32,13 +32,8 @@
                         <ul class="todo-list" data-url="<?php echo $this->webroot; ?>minhas_tarefas/ordenar">
 
                             <?php
-                            echo count($tarefas);
-                            if(isset($tarefas) && count($tarefas)>0)
+                            if(isset($tarefas) && count($tarefas)>0 && isset($tarefas->{0}->Tarefa))
                             {
-
-                                echo '<pre>';
-                                var_dump($tarefas);
-                                echo '</pre>';exit;
                                 foreach($tarefas as $tarefa)
                                 {
                                     ?>
