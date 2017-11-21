@@ -3,9 +3,9 @@
 Simple W APP é o resultado de uma prova técnica sobre PHP. Contém resolução de exercícios e um pequeno gerenciador de tarefas. Também possui uma API REST para integração.
 
 
-## Instalação via Composer
+## Instalação via Git e Composer
 
-1º Passo => Clonar o projeto do repositório https://glaubergedoz@bitbucket.org/glaubergedoz/simple-w-app.git
+1º Passo => Clonar o projeto do repositório \https://glaubergedoz@bitbucket.org/glaubergedoz/simple-w-app.git
 
 2º Passo => Instalar os componentes do projeto com o comando: composer install
 
@@ -18,7 +18,7 @@ Simple W APP é o resultado de uma prova técnica sobre PHP. Contém resolução
 
 PHP = 5.3
 
-MySQL/MariaDB >= 5.1 (>= 10.1)
+MySQL >= 5.1 (ou MariaDB >= 10.1)
 
 
 ## Recursos
