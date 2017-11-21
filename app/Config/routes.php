@@ -20,16 +20,20 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-    Router::parseExtensions();
+Router::connect('/', array('controller' => 'minhas_tarefas'));
+
+Router::parseExtensions();
 
 /**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.
  */
-	CakePlugin::routes();
+
+CakePlugin::routes();
 
 /**
  * Load the CakePHP default routes. Only remove this if you do not want to use
  * the built-in default routes.
  */
-	require CAKE . 'Config' . DS . 'routes.php';
+
+require CAKE . 'Config' . DS . 'routes.php';
