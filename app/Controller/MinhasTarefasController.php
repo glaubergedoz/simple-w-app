@@ -38,7 +38,7 @@ class MinhasTarefasController extends AppController
         $tarefas = null;
 
         echo '<pre>';
-        var_dump($response_body);exit;
+        var_dump($response);exit;
         echo '</pre>';
 
 
