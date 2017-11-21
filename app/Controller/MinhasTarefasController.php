@@ -28,7 +28,7 @@ class MinhasTarefasController extends AppController
 
     public function pesquisar()
     {
-        $link =  "http://" . $_SERVER['HTTP_HOST'] . $this->webroot.'tarefas/pesquisar.json';
+        $link =  $_SERVER["HTTP_REFERER"].'tarefas/pesquisar.json';
 
         $data = null;
         $httpSocket = new HttpSocket();
@@ -61,7 +61,7 @@ class MinhasTarefasController extends AppController
 
     public function mostrar($id=null)
     {
-        $link = "http://" . $_SERVER['HTTP_HOST'] . $this->webroot.'tarefas/mostrar/'.$id.'.json';
+        $link = $_SERVER["HTTP_REFERER"].'tarefas/mostrar/'.$id.'.json';
 
         $data = null;
         $httpSocket = new HttpSocket();
@@ -99,7 +99,7 @@ class MinhasTarefasController extends AppController
 
     public function alterar($id=null)
     {
-        $link = "http://" . $_SERVER['HTTP_HOST'] . $this->webroot.'tarefas/mostrar/'.$id.'.json';
+        $link = $_SERVER["HTTP_REFERER"].'tarefas/mostrar/'.$id.'.json';
 
         $data = null;
         $httpSocket = new HttpSocket();
@@ -137,7 +137,7 @@ class MinhasTarefasController extends AppController
         {
             //exclui a tarefa
 
-            $link = "http://" . $_SERVER['HTTP_HOST'] . $this->webroot.'tarefas/excluir.json';
+            $link = $_SERVER["HTTP_REFERER"].'tarefas/excluir.json';
 
             $data = array('id' => $id);
 
@@ -194,7 +194,7 @@ class MinhasTarefasController extends AppController
 
             //
 
-            $url_close = "http://" . $_SERVER['HTTP_HOST'] . $this->webroot.'/minhas_tarefas';
+            $url_close = $_SERVER["HTTP_REFERER"].'/minhas_tarefas';
             $id_sufix = '_2';
             $resultado = 'sucesso';
 
@@ -202,7 +202,7 @@ class MinhasTarefasController extends AppController
 
             //pede pra confirmar
 
-            $url_close = $url_close = "http://" . $_SERVER['HTTP_HOST'] . $this->webroot.'/minhas_tarefas/excluir/'.$id.'/confirm';
+            $url_close = $url_close = $_SERVER["HTTP_REFERER"].'/minhas_tarefas/excluir/'.$id.'/confirm';
             $mensagem_geral = 'A Tarefa selecionada será excluída. Você confirma?';
             $id_sufix = '_1';
             $resultado = 'confirma';
@@ -221,7 +221,7 @@ class MinhasTarefasController extends AppController
 
     public function concluir($id)
     {
-        $link = "http://" . $_SERVER['HTTP_HOST'] . $this->webroot.'tarefas/concluir.json';
+        $link = $_SERVER["HTTP_REFERER"].'tarefas/concluir.json';
 
         $data = array('id' => $id);
 
@@ -277,7 +277,7 @@ class MinhasTarefasController extends AppController
 
         //
 
-        $url_close = $url_close = "http://" . $_SERVER['HTTP_HOST'] . $this->webroot.'/minhas_tarefas';
+        $url_close = $url_close = $_SERVER["HTTP_REFERER"].'/minhas_tarefas';
         $id_sufix = '_1';
         $resultado = 'sucesso';
 
@@ -294,7 +294,7 @@ class MinhasTarefasController extends AppController
 
     public function ordenar()
     {
-        $link = "http://" . $_SERVER['HTTP_HOST'] . $this->webroot.'tarefas/ordenar.json';
+        $link = $_SERVER["HTTP_REFERER"].'tarefas/ordenar.json';
 
         $data = array(
             'id' => $this->request->data['id'],
@@ -326,7 +326,7 @@ class MinhasTarefasController extends AppController
 
         //
 
-        $url_close = $url_close = "http://" . $_SERVER['HTTP_HOST'] . $this->webroot.'/minhas_tarefas';
+        $url_close = $url_close = $_SERVER["HTTP_REFERER"].'/minhas_tarefas';
         $id_sufix = '_1';
         $resultado = 'sucesso';
 
@@ -358,7 +358,7 @@ class MinhasTarefasController extends AppController
                 $acao = $this->acao['adicionar'];
             }
 
-            $link = "http://" . $_SERVER['HTTP_HOST'] . $this->webroot.'tarefas/'.$metodo.'.json';
+            $link = $_SERVER["HTTP_REFERER"].'tarefas/'.$metodo.'.json';
 
             $data = $this->request->data;
             $httpSocket = new HttpSocket();
@@ -394,7 +394,7 @@ class MinhasTarefasController extends AppController
                     return json_encode(
                         array(
                             'id_sufix' => '_1',
-                            'url_close' => $url_close = "http://" . $_SERVER['HTTP_HOST'] . $this->webroot.'/minhas_tarefas',
+                            'url_close' => $url_close = $_SERVER["HTTP_REFERER"].'/minhas_tarefas',
                             //'resultado' => 'sucesso',
                             'resultado' => $tarefa->resultado,
                             'mensagem_geral' => $mensagem_geral,
