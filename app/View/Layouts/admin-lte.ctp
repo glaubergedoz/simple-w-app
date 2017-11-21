@@ -7,26 +7,26 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="<?php echo $this->webroot; ?>/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/<?php echo $this->webroot; ?>/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="<?php echo $_SERVER["HTTP_REFERER"]; ?>/bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/<?php echo $this->webroot; ?>/bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="<?php echo $_SERVER["HTTP_REFERER"]; ?>/bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="/<?php echo $this->webroot; ?>/bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="<?php echo $_SERVER["HTTP_REFERER"]; ?>/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="/<?php echo $this->webroot; ?>/dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="<?php echo $_SERVER["HTTP_REFERER"]; ?>/dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="/<?php echo $this->webroot; ?>/dist/css/skins/_all-skins.min.css">
   <!-- Morris chart -->
-  <link rel="stylesheet" href="<?php echo $_SERVER["HTTP_REFERER"]; ?>/bower_components/morris.js/morris.css">
+  <link rel="stylesheet" href="/<?php echo $this->webroot; ?>/bower_components/morris.js/morris.css">
   <!-- jvectormap -->
-  <link rel="stylesheet" href="<?php echo $_SERVER["HTTP_REFERER"]; ?>/bower_components/jvectormap/jquery-jvectormap.css">
+  <link rel="stylesheet" href="/<?php echo $this->webroot; ?>/bower_components/jvectormap/jquery-jvectormap.css">
   <!-- Date Picker -->
-  <link rel="stylesheet" href="<?php echo $_SERVER["HTTP_REFERER"]; ?>/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="/<?php echo $this->webroot; ?>/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="<?php echo $_SERVER["HTTP_REFERER"]; ?>/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="/<?php echo $this->webroot; ?>/bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
-  <link rel="stylesheet" href="<?php echo $_SERVER["HTTP_REFERER"]; ?>/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  <link rel="stylesheet" href="/<?php echo $this->webroot; ?>/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
 
     <?php echo $this->Html->css('main.css'); ?>
@@ -46,7 +46,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="<?php echo $_SERVER["HTTP_REFERER"]; ?>" class="logo">
+    <a href="/<?php echo $this->webroot; ?>" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>SWA</b></span>
       <!-- logo for regular state and mobile devices -->
@@ -89,8 +89,8 @@
             </span>
               </a>
               <ul class="treeview-menu" style="display: block;">
-                  <li class="active"><a href="<?php echo $_SERVER["HTTP_REFERER"]; ?>/minhas_tarefas"><i class="fa fa-search"></i> Minhas Tarefas</a></li>
-                  <li><a href="<?php echo $_SERVER["HTTP_REFERER"]; ?>/minhas_tarefas/adicionar"><i class="fa fa-plus"></i> Adicionar Tarefa</a></li>
+                  <li class="active"><a href="/<?php echo $this->webroot; ?>/minhas_tarefas"><i class="fa fa-search"></i> Minhas Tarefas</a></li>
+                  <li><a href="/<?php echo $this->webroot; ?>/minhas_tarefas/adicionar"><i class="fa fa-plus"></i> Adicionar Tarefa</a></li>
               </ul>
           </li>
 
@@ -155,7 +155,7 @@
         </li>-->
 
         <li>
-          <a href="<?php echo $_SERVER["HTTP_REFERER"]; ?>/calculadora">
+          <a href="/<?php echo $this->webroot; ?>/calculadora">
             <i class="fa fa-th"></i> <span>Múltiplos de 3 e 5</span>
             <span class="pull-right-container">
             </span>
@@ -163,7 +163,7 @@
         </li>
 
         <li>
-          <a href="<?php echo $_SERVER["HTTP_REFERER"]; ?>/codigo_refatorado/index/1">
+          <a href="/<?php echo $this->webroot; ?>/codigo_refatorado/index/1">
             <i class="fa fa-th"></i> <span>Refatoração 1</span>
             <span class="pull-right-container">
             </span>
@@ -171,7 +171,7 @@
         </li>
 
         <li>
-          <a href="<?php echo $_SERVER["HTTP_REFERER"]; ?>/codigo_refatorado/index/2">
+          <a href="/<?php echo $this->webroot; ?>/codigo_refatorado/index/2">
             <i class="fa fa-th"></i> <span>Refatoração 2</span>
             <span class="pull-right-container">
             </span>
@@ -179,7 +179,7 @@
         </li>
 
         <li>
-          <a href="<?php echo $_SERVER["HTTP_REFERER"]; ?>/tarefas">
+          <a href="/<?php echo $this->webroot; ?>/tarefas">
             <i class="fa fa-th"></i> <span>API</span>
             <span class="pull-right-container">
             </span>
@@ -215,7 +215,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0
     </div>
-    <strong>Copyright &copy; 2017 <a href="<?php echo $_SERVER["HTTP_REFERER"]; ?>">Simple W App</a>.</strong> Todos os direitos reservados.
+    <strong>Copyright &copy; 2017 <a href="/<?php echo $this->webroot; ?>">Simple W App</a>.</strong> Todos os direitos reservados.
   </footer>
 
   <!-- Control Sidebar -->
@@ -415,9 +415,9 @@
 <!-- ./wrapper -->
 
 <!-- jQuery 3 -->
-<script src="<?php echo $_SERVER["HTTP_REFERER"]; ?>/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/<?php echo $this->webroot; ?>/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="<?php echo $_SERVER["HTTP_REFERER"]; ?>/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script src="/<?php echo $this->webroot; ?>/bower_components/jquery-ui/jquery-ui.min.js"></script>
 
 <!-- jQuery UI Touch Punch -->
 
@@ -430,34 +430,34 @@
   $.widget.bridge('uibutton', $.ui.button);
 </script>
 <!-- Bootstrap 3.3.7 -->
-<script src="<?php echo $_SERVER["HTTP_REFERER"]; ?>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/<?php echo $this->webroot; ?>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Morris.js charts -->
-<script src="<?php echo $_SERVER["HTTP_REFERER"]; ?>/bower_components/raphael/raphael.min.js"></script>
-<script src="<?php echo $_SERVER["HTTP_REFERER"]; ?>/bower_components/morris.js/morris.min.js"></script>
+<script src="/<?php echo $this->webroot; ?>/bower_components/raphael/raphael.min.js"></script>
+<script src="/<?php echo $this->webroot; ?>/bower_components/morris.js/morris.min.js"></script>
 <!-- Sparkline -->
-<script src="<?php echo $_SERVER["HTTP_REFERER"]; ?>/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+<script src="/<?php echo $this->webroot; ?>/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
 <!-- jvectormap -->
-<script src="<?php echo $_SERVER["HTTP_REFERER"]; ?>/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="<?php echo $_SERVER["HTTP_REFERER"]; ?>/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src="/<?php echo $this->webroot; ?>/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="/<?php echo $this->webroot; ?>/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
 <!-- jQuery Knob Chart -->
-<script src="<?php echo $_SERVER["HTTP_REFERER"]; ?>/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+<script src="/<?php echo $this->webroot; ?>/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
-<script src="<?php echo $_SERVER["HTTP_REFERER"]; ?>/bower_components/moment/min/moment.min.js"></script>
-<script src="<?php echo $_SERVER["HTTP_REFERER"]; ?>/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="/<?php echo $this->webroot; ?>/bower_components/moment/min/moment.min.js"></script>
+<script src="/<?php echo $this->webroot; ?>/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
 <!-- datepicker -->
-<script src="<?php echo $_SERVER["HTTP_REFERER"]; ?>/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="/<?php echo $this->webroot; ?>/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <!-- Bootstrap WYSIHTML5 -->
-<script src="<?php echo $_SERVER["HTTP_REFERER"]; ?>/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<script src="/<?php echo $this->webroot; ?>/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 <!-- Slimscroll -->
-<script src="<?php echo $_SERVER["HTTP_REFERER"]; ?>/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="/<?php echo $this->webroot; ?>/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
-<script src="<?php echo $_SERVER["HTTP_REFERER"]; ?>/bower_components/fastclick/lib/fastclick.js"></script>
+<script src="/<?php echo $this->webroot; ?>/bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
-<script src="<?php echo $_SERVER["HTTP_REFERER"]; ?>/dist/js/adminlte.min.js"></script>
+<script src="/<?php echo $this->webroot; ?>/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?php echo $_SERVER["HTTP_REFERER"]; ?>/dist/js/pages/dashboard.js"></script>
+<script src="/<?php echo $this->webroot; ?>/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="<?php echo $_SERVER["HTTP_REFERER"]; ?>/dist/js/demo.js"></script>
+<script src="/<?php echo $this->webroot; ?>/dist/js/demo.js"></script>
 
 <?php echo $this->Html->script('main.js'); ?>
 

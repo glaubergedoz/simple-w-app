@@ -6,13 +6,13 @@
 
             Tarefa #<?php echo $tarefa->Tarefa->id ?>
 
-            <a href="<?php echo $_SERVER["HTTP_REFERER"]; ?>/minhas_tarefas"
+            <a href="/<?php echo $this->webroot; ?>/minhas_tarefas"
                class="btn btn-sm btn-primary pull-right color-white">
                 <i class="fa fa-search"></i>
                 <span class="texto_responsivo"> Minhas Tarefas</span>
             </a>
 
-            <a href="<?php echo $_SERVER["HTTP_REFERER"]; ?>/minhas_tarefas/alterar/<?php echo $tarefa->Tarefa->id ?>"
+            <a href="/<?php echo $this->webroot; ?>/minhas_tarefas/alterar/<?php echo $tarefa->Tarefa->id ?>"
                class="btn btn-sm bg-orange pull-right margin-r20">
                 <i class="fa fa-edit"></i>
                 <span class="texto_responsivo"> Alterar Tarefa</span>
