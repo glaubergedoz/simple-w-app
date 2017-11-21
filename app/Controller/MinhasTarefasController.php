@@ -29,7 +29,7 @@ class MinhasTarefasController extends AppController
     public function pesquisar()
     {
         $link =  $this->webroot.'tarefas/pesquisar.json';
-        echo $link;
+        echo $_SERVER['HTTP_HOST'];
 
         $data = null;
         $httpSocket = new HttpSocket();
