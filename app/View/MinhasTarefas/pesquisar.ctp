@@ -5,7 +5,7 @@
 
             Minhas Tarefas
 
-            <a href="/<?php echo $this->webroot; ?>/minhas_tarefas/adicionar"
+            <a href="<?php echo $this->webroot; ?>minhas_tarefas/adicionar"
                class="btn btn-sm btn-success pull-right">
                 <i class="fa fa-plus"></i>
                 <span class="texto_responsivo"> Adicionar Tarefa</span>
@@ -29,7 +29,7 @@
 
                     <div class="box-body">
 
-                        <ul class="todo-list" data-url="/<?php echo $this->webroot; ?>/minhas_tarefas/ordenar">
+                        <ul class="todo-list" data-url="<?php echo $this->webroot; ?>minhas_tarefas/ordenar">
 
                             <?php
                             if(isset($tarefas) && count($tarefas)>0)
@@ -58,13 +58,13 @@
                                             <input class="pointer btn-status btn-salvar"
                                                    name="situacao_id" type="checkbox"
                                                    value="1" title="concluir a tarefa"
-                                                   data-url="/<?php echo $this->webroot; ?>/minhas_tarefas/concluir/<?php echo $tarefa->Tarefa->id; ?>">
+                                                   data-url="<?php echo $this->webroot; ?>minhas_tarefas/concluir/<?php echo $tarefa->Tarefa->id; ?>">
 
                                         <?php
                                         }
                                         ?>
 
-                                        <a href="/<?php echo $this->webroot; ?>/minhas_tarefas/mostrar/<?php echo $tarefa->Tarefa->id; ?>">
+                                        <a href="<?php echo $this->webroot; ?>minhas_tarefas/mostrar/<?php echo $tarefa->Tarefa->id; ?>">
                                             <span class="text text-black <?php if($tarefa->Tarefa->situacao_id==2) { echo 'text-line-through'; } ?>">
 
 
@@ -109,17 +109,17 @@
                                         <div class="tools">
 
                                             <a class="tools-a"
-                                               href="/<?php echo $this->webroot; ?>/minhas_tarefas/mostrar/<?php echo $tarefa->Tarefa->id; ?>">
+                                               href="<?php echo $this->webroot; ?>minhas_tarefas/mostrar/<?php echo $tarefa->Tarefa->id; ?>">
                                                 <i class="fa fa-info"></i>
                                             </a>
 
                                             <a class="tools-a"
-                                               href="/<?php echo $this->webroot; ?>/minhas_tarefas/alterar/<?php echo $tarefa->Tarefa->id; ?>">
+                                               href="<?php echo $this->webroot; ?>minhas_tarefas/alterar/<?php echo $tarefa->Tarefa->id; ?>">
                                                 <i class="fa fa-edit"></i>
                                             </a>
 
                                             <a class="btn-salvar"
-                                               href="/<?php echo $this->webroot; ?>/minhas_tarefas/excluir/<?php echo $tarefa->Tarefa->id; ?>">
+                                               href="<?php echo $this->webroot; ?>minhas_tarefas/excluir/<?php echo $tarefa->Tarefa->id; ?>">
                                                 <i class="fa fa-trash-o"></i>
                                             </a>
 

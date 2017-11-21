@@ -5,7 +5,7 @@
 
             Alterar Tarefa
 
-            <a href="/<?php echo $this->webroot; ?>/minhas_tarefas"
+            <a href="<?php echo $this->webroot; ?>minhas_tarefas"
                class="btn btn-sm btn-primary pull-right">
                 <i class="fa fa-search"></i>
                 <span class="texto_responsivo"> Minhas Tarefas</span>
@@ -27,8 +27,8 @@
 
             <form id="form_tarefas" class="form-horizontal"
                   method="post"
-                  action="/<?php echo $this->webroot; ?>/minhas_tarefas/salvar"
-                  data-url="/<?php echo $this->webroot; ?>/minhas_tarefas/salvar">
+                  action="<?php echo $this->webroot; ?>minhas_tarefas/salvar"
+                  data-url="<?php echo $this->webroot; ?>minhas_tarefas/salvar">
 
                 <input type="hidden" name="id" value="<?php echo $tarefa->Tarefa->id; ?>">
 
@@ -122,7 +122,7 @@
                             Salvar Alterações
                         </button>
 
-                        <a href="/<?php echo $this->webroot; ?>/minhas_tarefas" class="btn btn-danger">
+                        <a href="<?php echo $this->webroot; ?>minhas_tarefas" class="btn btn-danger">
                             <i class="fa fa-close"></i>
                             Cancelar
                         </a>
