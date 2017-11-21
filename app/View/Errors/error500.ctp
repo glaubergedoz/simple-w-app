@@ -14,6 +14,18 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 ?>
+<?php
+if($this->request->is('json'))
+{
+    $this->layout = null;
+    echo json_encode(
+        array(
+            'status' => $this->response->statusCode(),
+            'mensagem' => $message
+        )
+    );
+} else {
+?>
 <h2><?php echo $message; ?></h2>
 <p class="error">
 	<strong><?php echo __d('cake', 'Error'); ?>: </strong>
@@ -23,4 +35,5 @@
 if (Configure::read('debug') > 0):
 	echo $this->element('exception_stack_trace');
 endif;
+}
 ?>

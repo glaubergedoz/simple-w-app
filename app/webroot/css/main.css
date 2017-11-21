@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+.Obrigatorio {
+    color: red;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.Col-Esq {
+    display: inline-block;
+    margin: 0 20px 20px 0;;
+}
+.Col-Dir {
+    display: inline-block;
+    margin: 0 0 20px 0;
+}
+
+.Oculto {
+    display: none;
+}
+
+.input-upper {
+    text-transform:uppercase;
+}
+
+.textarea-60 {
+    height: 60px !important;
+}
+
+.textarea-120 {
+    height: 120px !important;
+}
+
+.text-150 {
+    font-size: 120%;
+}
+
+.text-180 {
+    font-size: 180%;
+}
+
+.text-black {
+    color: black;
+}
+
+.text-line-through {
+    text-decoration: line-through;
+}
+
+.tools a {
+    margin-right: 10px;
+}
+
+.check_green {
+    margin: 0 10px 0 30px;
+    color: green;
+}
+
+.bg-checked {
+    background: #bdbbbb !important;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+@media (max-width: 384px) {
+    .texto_responsivo {
+        display: none;
+    }
+}
+
+.margin-r20 {
+    margin-right: 20px;
+}
+
+.color-white {
+    color: #fff0ff !important;
+}
+
+.tarefa_id {
+    min-width: 30px;
+    display: inline-block;
+}
+
+.ul-1 .li-1 {
+    margin-bottom: 15px;
+}
