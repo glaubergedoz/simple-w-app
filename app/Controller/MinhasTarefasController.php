@@ -28,8 +28,7 @@ class MinhasTarefasController extends AppController
 
     public function pesquisar()
     {
-        $link =  $this->webroot.'tarefas/pesquisar.json';
-        echo $_SERVER['HTTP_HOST'];
+        $link =  $_SERVER['HTTP_HOST'].'/tarefas/pesquisar.json';
 
         $data = null;
         $httpSocket = new HttpSocket();
@@ -37,9 +36,13 @@ class MinhasTarefasController extends AppController
         $response_body = json_decode($response->body);
         $tarefas = null;
 
-        echo '<pre>';
-        var_dump($response);exit;
-        echo '</pre>';
+        echo $link;
+        echo '<br>';
+        echo FULL_BASE_URL;
+
+        /*echo '<pre>';
+        var_dump(FULL_BASE_URL);exit;
+        echo '</pre>';*/
 
 
         if($response_body!==null)
