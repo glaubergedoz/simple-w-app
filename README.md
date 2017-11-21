@@ -5,7 +5,7 @@ Simple W APP é o resultado de uma prova técnica sobre PHP. Contém resolução
 
 ## Instalação via Git e Composer
 
-1º Passo => Clonar o projeto do repositório https://glaubergedoz@bitbucket.org/glaubergedoz/simple-w-app.git
+1º Passo => Clonar o projeto do repositório https://github.com/glaubergedoz/simple-w-app.git
 
 2º Passo => Instalar os componentes do projeto com o comando: composer install
 
