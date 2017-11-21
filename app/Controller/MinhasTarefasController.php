@@ -29,7 +29,7 @@ class MinhasTarefasController extends AppController
     public function pesquisar()
     {
         $link =  $this->webroot.'tarefas/pesquisar.json';
-        echo $this->webroot;
+        echo $link;
 
         $data = null;
         $httpSocket = new HttpSocket();
@@ -48,15 +48,15 @@ class MinhasTarefasController extends AppController
 
             } else if(isset($response_body->status) && $response_body->status>0) {
 
-                throw new ErrorException('Erro 5364 - WS retornou erro', 400);
+                throw new ErrorException('Erro 536422 - WS retornou erro', 400);
 
             } else {
-                throw new ErrorException('Erro 5364 - WS retornou erro', 400);
+                throw new ErrorException('Erro 536433 - WS retornou erro', 400);
             }
 
         } else {
             //response não está no formato json
-            throw new ErrorException('Erro 5364 - WS retornou erro', 400);
+            throw new ErrorException('Erro 536455 - WS retornou erro', 400);
         }
     }
 
